@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Portfólio - Weverton</title>
-	</head>
-	<body>
-		<div class="container">
-			<nav>
-				<section>
-					<span></span>
-					<h3>Weverton Martins</h3>
-				</section>
 
-				<ul>
-					<li id="#home">Início</li>
-					<li id="#about">Sobre-Mim</li>
-					<li id="#skills">Habilidades</li>
-					<li id="#projects">Projetos</li>
-					<li id="#contact">Contatos</li>
-				</ul>
-			</nav>
-		</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Portfólio - Weverton</title>
+</head>
+
+<body>
+	<div id="container" class="container">
+		<nav>
+			<section>
+				<img src="./image/logo.png" alt="logo">
+				<h3>Weverton Martins</h3>
+			</section>
+
+			<ul>
+				<li><a href="#home">Início</a></li>
+				<li><a href="#about">Sobre-Mim</a></li>
+				<li><a href="#skills">Habilidades</a></li>
+				<li><a href="#projects">Projetos</a></li>
+				<li><a href="#contact">Contatos</a></li>
+			</ul>
+		</nav>
 
 		<main>
 			<section id="home">
-				<img src="" alt="banner" />
+				<img src="./image/banner.png" alt="banner" />
 
 				<div class="absolute_content">
 					<h1>Weverton Martins</h1>
 
-					<ul>
-						<li>Desenvolvedor Front-End</li>
-						<li>Desenvolvedor Back-End</li>
-						<li>Desenvolvedor de Games</li>
-					</ul>
+					<div class="absolute">
+						<p>Desenvolvedor Front-End</p>
+						<p>Desenvolvedor Back-End</p>
+						<p>Desenvolvedor de Games</p>
+					</div>
 				</div>
 			</section>
 
@@ -67,23 +70,13 @@
 				<h3>Minhas Habilidades e Conhecimentos</h3>
 
 				<div class="content">
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-					/>
+					<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
 
+					<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
 					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-					/>
-
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-					/>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-					/>
+						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+					<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+					<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
 				</div>
 			</section>
 
@@ -101,21 +94,14 @@
 				<form action="" method="post">
 					<input type="text" name="name" placeholder="Nome" required />
 					<input type="email" name="email" placeholder="Email" required />
-					<textarea
-						name="message"
-						cols="30"
-						rows="10"
-						placeholder="Mensagem"
-						required
-					></textarea>
+					<textarea name="message" cols="30" rows="10" placeholder="Mensagem" required></textarea>
 					<button type="submit">Enviar Mensagem</button>
 				</form>
 
 				<div class="content">
 					<a href="https://www.linkedin.com/in/weverton-martins-3b4b98223/">
 						<img
-							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
-						/>
+							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
 					</a>
 				</div>
 			</section>
@@ -140,5 +126,7 @@
 				<p>Termos de Serviço</p>
 			</section>
 		</footer>
-	</body>
+	</div>
+</body>
+
 </html>

@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #fff;
+    --background-card: #f4f4f4;
+    --text-color: #333;
+    --font-family: 'Arial, sans-serif';
+    --font-size-default: 16px;
+    --border-radius: 10px;
+    --box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+    background: var(--background-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: auto 0;
+    padding: 20px;
+    width: 80%;
+}
+
+/* Agrupamento de seletores para estilos comuns (background, borda, sombra) */
+.container nav,
+.container main {
+    background: var(--background-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+}
+
+.container nav {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+.container nav section {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.container nav section img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.container nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.container nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.container main {
+    text-align: center;
+}
+
+.container main section {
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.container main section img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.container main section h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.container main section h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.container main section p {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.container main section ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.container main section ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Agrupamento para partes específicas das sections */
+.container main #home .absolute_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px 4px #0008;
+}
+
+.container main #home .absolute_content p {
+    border-radius: var(--border-radius);
+    background-color: #33333398;
+    padding:  10px 10px;
+}
