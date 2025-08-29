@@ -1,229 +1,174 @@
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --background-color: #fff;
-    --background-card: #f4f4f4;
+    --font-family: "Arial", sans-serif;
+    --background-text: #e0e0e0;
+    --background-color: #f1f1f1;
+    --container-color: #ffffff;
+    --title-color: #00aeff;
     --text-color: #333;
-    --font-family: 'Arial, sans-serif';
-    --font-size-default: 16px;
-    --border-radius: 10px;
-    --box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 html,
 body {
-    background: var(--background-color);
+    background-color: var(--background-color);
     font-family: var(--font-family);
     color: var(--text-color);
     scroll-behavior: smooth;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    margin: auto 0;
-    padding: 20px;
-    width: 80%;
-}
-
-/* Agrupamento de seletores para estilos comuns (background, borda, sombra) */
-.container nav,
-.container main,
-.container footer {
-    background: var(--background-card);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
 }
 
 .container nav {
-    justify-content: space-around;
+    border-bottom: 2px solid var(--title-color);
+    background-color: var(--container-color);
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    position: fixed;
+    padding: 1rem;
     display: flex;
-}
-
-.container nav section {
-    align-items: center;
-    display: flex;
-    gap: 10px;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .container nav section img {
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    max-height: 150px;
+    max-width: 150px;
+    height: auto;
+    width: 100%;
+}
+
+.container nav section h3 {
+    color: var(--title-color);
+    font-size: 1.2rem;
 }
 
 .container nav ul {
-    display: flex;
-    gap: 20px;
     list-style: none;
-    margin: 0;
+    text-align: left;
+    width: 100%;
     padding: 0;
+}
+
+.container nav ul li {
+    background-color: var(--background-text);
+    border-radius: 20px;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 .container nav ul li a {
     color: var(--text-color);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.container nav ul li a:hover {
-    color: var(--primary-color);
 }
 
 .container main {
+    position: relative;
+    margin-left: 200px;
+    padding: 1rem;
+}
+
+.container main section {
+    background-color: var(--container-color);
+    box-shadow: 0 10px 10px #0000001a;
+    border-radius: 10px;
+    margin-bottom: 1rem;
     text-align: center;
-}
-
-.container main section,
-.container footer section {
-    margin-bottom: 10px;
-    padding: 20px;
-}
-
-.container main section img {
-    max-width: 100%;
-    border-radius: var(--border-radius);
-}
-
-.container main section h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    padding: 1rem 2rem;
 }
 
 .container main section h3 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
+    color: var(--title-color);
+    margin-bottom: 1rem;
 }
 
 .container main section p {
+    margin-bottom: 2rem;
     text-align: justify;
-    font-size: 1em;
-    line-height: 1.5;
 }
 
 .container main section ul {
-    text-align: left;
     list-style: none;
     padding: 0;
 }
 
 .container main section ul li {
-    margin-bottom: 10px;
-    position: relative;
+    background-color: var(--background-text);
+    border-radius: 20px;
+    margin: 1rem 0;
+    padding: 0.5rem;
 }
 
-/* Agrupamento para partes específicas das sections */
-.container main #home .absolute_content {
+/* Parte referente a configurações específicas */
+.container main .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.container main .back-to-top img {
+    background-color: #00aeff88;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.container main #home img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+.container main #about ul {
+    justify-content: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-shadow: 2px 2px 4px #0008;
+    flex-wrap: wrap;
 }
 
-.container main #home .absolute_content p {
-    border-radius: var(--border-radius);
-    background-color: #33333398;
-    padding:  10px 10px;
-}
-
-.container main #about .content-about {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-}
-
-.container main #about .content-about  img {
-    border-radius: var(--border-radius);
-    width: 200px;
-    height: 200px;
+.container main #about ul li {
+    margin: 1rem;
 }
 
 .container main #skills .content {
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container main #skills .content img {
-    background: var(--background-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    text-align: center;
-    padding: 20px;
-    width: 150px;
+    max-width: 100px;
+    margin: 1rem;
+    height: auto;
 }
 
-.container main #contact form {
+.container main #contacts form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
 }
 
-.container main #contact form input,
-.container main #contact form textarea {
-    border-radius: var(--border-radius);
-    font-family: var(--font-family);
-    border: 2px solid #ccc;
+.container main #contacts form input,
+.container main #contacts form textarea,
+.container main #contacts form button {
+    border: 1px solid var(--background-text);
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    max-width: 500px;
+    padding: 1rem;
     width: 100%;
-    padding: 10px;
-    font-size: 1em;
 }
 
-.container main #contact form button {
-    background: var(--primary-color);
-    border-radius: var(--border-radius);
-    width: 100%;
-    border: none;
-    color: #fff;
+.container main #contacts form button {
+    background-color: var(--title-color);
     cursor: pointer;
-    font-size: 1em;
-    padding: 20px 20px;
-    transition: background 0.3s;
+    color: #fff;
+    border: none;
 }
 
-.container main #contact form button:hover {
-    background: var(--secondary-color);
-}
-
-.container main #contact .content {
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    flex-wrap: wrap;
-    display: flex;
-    gap: 20px;
-}
-
-.container main #contact .content a {
-    border-radius: var(--border-radius);
-    color: var(--text-color);
-    text-align: center;
-    width: 50px;
-}
-
-/* Agrupamento para partes específicas das footer */
-.container footer {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    padding: 10px;
-}
-
-.container footer section {
-    font-size: 1.0em;
-    text-align: center;
-}
